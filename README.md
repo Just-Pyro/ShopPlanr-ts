@@ -1,54 +1,117 @@
-# React + TypeScript + Vite
+# ShopPlanr — Web App (React TS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A smart shopping planner that helps you organize your grocery runs, set budgets, and track your actual spending in real time.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖥️ Screenshots
 
-## Expanding the ESLint configuration
+| Dashboard                                    | Plan Details                               | Shopping Mode                                 |
+| -------------------------------------------- | ------------------------------------------ | --------------------------------------------- |
+| ![Dashboard](./screenshots/landing-list.png) | ![Details](./screenshots/plan-details.png) | ![Shopping](./screenshots/start-shopping.png) |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## ✨ Features
+
+- 📋 **Create Shopping Plans** — Set up a plan with a store location, scheduled date, and total budget before your shopping trip.
+- 🛒 **Plan Your Items** — Add the items you intend to buy, including the planned quantity for each.
+- 📍 **Store Location** — Attach a location to each plan so you know exactly where you're headed.
+- 📅 **Scheduled Date** — Set a date for the trip so your plans are organized chronologically.
+- ✅ **Shopping Mode** — When the scheduled date arrives, activate the plan to start recording your actual purchases.
+- 💰 **Real-time Budget Tracking** — Input the actual quantity bought and the price per item; the app automatically deducts from your budget as you shop.
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework:** React (Vite)
+- **Styling:** CSS / Tailwind
+- **Data Source:** REST API (shared with mobile version)
+- **Language:** TypeScript / TSX
+
+---
+
+## 🚀 Setup & Installation
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- npm (comes with Node.js)
+
+---
+
+### Steps
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/Just-Pyro/ShopPlanr-ts.git
+cd shopplanr-ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**2. Install dependencies**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+**3. Configure the API**
+
+Serve the Blade Version:
+
+```bash
+php artisan serve
+```
+
+> Please look up the Blade version for setup and installation [ShopPlanr - Blade](https://github.com/Just-Pyro/Shopplanr)
+
+**4. Start the development server**
+
+```bash
+npm run dev
+```
+
+**5. Open in your browser**
+
+Visit [http://localhost:5173](http://localhost:5173) (or whichever port Vite assigns).
+
+---
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The compiled output will be in the `dist/` folder, ready to be deployed.
+
+---
+
+## 📁 Project Structure
+
+```
+shopplanr-web/
+├── src/
+│   ├── pages/        # Page-level components
+│   ├── components/   # Reusable UI components
+│   ├── services/     # API call functions
+│   └── main.tsx      # Entry point
+├── public/           # Static assets
+```
+
+---
+
+## 🔗 Related Repositories
+
+- [ShopPlanr — Expo Mobile](https://github.com/Just-Pyro/shopplanr-expo101)
+- [ShopPlanr — Laravel Blade](https://github.com/Just-Pyro/Shopplanr)
+- [ShopPlanr — React Web](https://github.com/Just-Pyro/Shopplanr-web)
+
+---
+
+## 📄 License
+
+This project is for portfolio purposes.
